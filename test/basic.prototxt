@@ -1,0 +1,5 @@
+name: "FlickrStyleCaffeNet"
+layers {
+  name: "data"
+  type: IMAGE_DATA
+}

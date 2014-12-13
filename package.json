@@ -1,0 +1,19 @@
+{
+  "name": "protobuf-textformat",
+  "version": "2.6.1",
+  "description": "Parser and encoder for the protobuf text format",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "James Brotchie <brotchie@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "parsimmon": "^0.5.1",
+    "protobufjs": "git+https://github.com/brotchie/ProtoBuf.js.git#compiled",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
+}
