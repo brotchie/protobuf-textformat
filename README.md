@@ -1,17 +1,17 @@
 
-Parser and encoder for TextFormat protobuf messages. Based on the C++ and Java implementations in the Google implementation (https://github.com/google/protobuf). Uses ProtoBuf.js (https://github.com/dcodeIO/ProtoBuf.js) to validate and structure parsed messages.
+Parser and encoder for TextFormat protobuf messages. Based on the C++ and Java TextFormat code in the Google implementation (https://github.com/google/protobuf). Uses ProtoBuf.js (https://github.com/dcodeIO/ProtoBuf.js) to validate and structure parsed messages.
 
 # Getting Started
 
 Install from npm:
 
-```
+```bash
 $ npm install protobuf-textformat
 ```
 
 Parse text into ProtoBuf.js message objects:
 
-```
+```javascript
 var ProtoBuf = require('protobufjs')
   , TextFormat = require('protobuf-textformat');
 
