@@ -1,5 +1,9 @@
 "use strict";
 
+/* Encodes ProtoBuf.js message into the
+ * protobuf text format.
+ */
+
 var _ = require('lodash');
 
 function encodeString(metadata, value, indent) {
@@ -85,7 +89,7 @@ function encodeValues(values, metadata, indent) {
       return encoder(metadata, value, indent);
     });
   } else {
-    console.log('No encoder for', metadata.type.name);
+    console.error('No encoder for', metadata.type.name);
     return [];
   }
 };

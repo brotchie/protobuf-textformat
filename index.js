@@ -1,6 +1,6 @@
+"use strict";
+
 var parse = require('./src/parser')
-
-
 
 function buildMessageFromAST(message, ast) {
   ast.map(function(entry) {
@@ -22,6 +22,8 @@ function buildMessageFromAST(message, ast) {
   });
 };
 
+module.exports.encode = require('./src/encoder');
+
 module.exports.parse = function(builder, fqn, input) {
   var MessageClass = builder.build(fqn)
    , message = new MessageClass();
@@ -35,4 +37,3 @@ module.exports.parse = function(builder, fqn, input) {
   return result;
 };
 
-module.exports.encode = require('./src/encoder');

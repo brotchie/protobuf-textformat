@@ -1,3 +1,9 @@
+"use strict";
+
+/* Parser combinator based parser for the
+ * protobuf text format.
+ */
+
 var Parsimmon = require('parsimmon');
 
 var regex = Parsimmon.regex
