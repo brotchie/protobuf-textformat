@@ -6,6 +6,9 @@ function buildMessageFromAST(message, ast) {
   ast.map(function(entry) {
     var value;
     var field = message.$type.getChild(entry.name)
+    if (field == null) {
+      return; // ignore unknown field;
+    }
     if (entry.type === 'pair') {
       value = entry.value;
     } else if (entry.type === 'message') {
