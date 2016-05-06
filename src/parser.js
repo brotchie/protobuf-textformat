@@ -28,8 +28,8 @@ var stripFirstLast = function(x) {
 };
 
 var identifier = lexeme(regex(/[a-zA-Z_][0-9a-zA-Z_+-]*/));
-var doubleString = lexeme(regex(/\"([^\"\n\\\\]|\\\\.)*(\"|\\\\?$)/).map(stripFirstLast));
-var singleString = lexeme(regex(/\'([^\'\n\\\\]|\\\\.)*(\'|\\\\?$)/).map(stripFirstLast));
+var doubleString = lexeme(regex(/\"([^\"\\]|\\.)*\"/).map(stripFirstLast));
+var singleString = lexeme(regex(/\'([^\'\\]|\\.)*\'/).map(stripFirstLast));
 
 var number = lexeme(regex(/[.]?[0-9+-][0-9a-zA-Z_.+-]*/)).map(Number);
 var trueLiteral = lexeme(string('true')).result(true);
